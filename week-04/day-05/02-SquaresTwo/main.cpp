@@ -61,14 +61,25 @@ void close()
     SDL_Quit();
 }
 
-void draw(Sint16 x1, Sint16 y1, int side, int depth)
+void draw(Sint16 x, Sint16 y, int side, int depth)
 {
-    if(depth == 7){
+    if(depth == 6){
         return;
     }
-    
-    SDL_Dra
 
+    SDL_Rect Rect = {x, y, side, side};
+    SDL_RenderFillRect( gRenderer, &Rect );
+    draw(Sint16 (x - 2*(side/3)), Sint16 (y-2*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x + side/3), Sint16 (y-2*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x + 4*(side/3)), Sint16 (y-2*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x + 4*(side/3)), Sint16 (y+(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x + 4*(side/3)), Sint16 (y+4*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x + side/3), Sint16 (y+4*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x - 2*(side/3)), Sint16 (y+4*(side/3)), Sint16 (side/3), depth + 1);
+    draw(Sint16 (x - 2*(side/3)), Sint16 (y+(side/3)), Sint16 (side/3), depth + 1);
+
+
+}
 
 
 int main(int argc, char *args[])
@@ -102,7 +113,8 @@ int main(int argc, char *args[])
 
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0x00, 0x00, 0xFF);
 
-        draw();
+        draw(SCREEN_WIDTH/3, SCREEN_WIDTH/3, SCREEN_WIDTH/3, 0);
+
 
         //Update screen
         SDL_RenderPresent(gRenderer);
