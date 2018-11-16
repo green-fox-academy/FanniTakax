@@ -27,11 +27,12 @@ void draw(Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Sint16 x3, Sint16 y3, int 
         return;
     }
     trigonRGBA(gRenderer, x1, y1, x2, y2, x3, y3, 0x00, 0x00, 0x00, 0xFF);
-    draw(Sint16 (x1 + x2 / 2), y1, x2, y2, Sint16 (x2 - (x2-x1)/4), Sint16 (y1 + y3/2), depth + 1);
-    //draw(depth + 1);
-    //draw(depth + 1);
 
+    draw(Sint16 (x1 + (x2-x1) / 2), y1, x2, y2, Sint16 (x3 + (x2-x3)/2), Sint16 (y1 + (y3-y1)/2), depth + 1);
 
+    draw(x1, y1, Sint16 (x1 + (x2-x1) / 2), y2, Sint16 (x1+(x3-x1)/2), Sint16 (y1+(y3-y1)/2), depth + 1);
+
+    draw(Sint16 (x1+(x3-x1)/2), Sint16 (y1+(y3-y1)/2), Sint16 (x3 + (x2-x3)/2), Sint16 (y1 + (y3-y1)/2), x3, y3, depth + 1);
 
 }
 
