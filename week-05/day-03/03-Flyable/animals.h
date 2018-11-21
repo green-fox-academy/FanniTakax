@@ -1,5 +1,6 @@
-#ifndef INC_02_ANIMALSINTHEZOO_ANIMALS_H
-#define INC_02_ANIMALSINTHEZOO_ANIMALS_H
+#ifndef INC_03_FLYABLE_ANIMALS_H
+#define INC_03_FLYABLE_ANIMALS_H
+
 
 #include <iostream>
 
@@ -19,4 +20,4 @@ protected:
 };
 
 
-#endif //INC_02_ANIMALSINTHEZOO_ANIMALS_H
+#endif //INC_03_FLYABLE_ANIMALS_H
