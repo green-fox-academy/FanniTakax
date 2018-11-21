@@ -17,3 +17,7 @@ void Bird::takeOff(){
 std::string Bird::getName() {
     return _name;
 }
+
+std::string Bird::breed() {
+    return "mammal";
+}

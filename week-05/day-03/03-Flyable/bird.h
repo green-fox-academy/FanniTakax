@@ -13,6 +13,7 @@ public:
     void takeOff() override;
 
     std::string getName() override;
+    std::string breed() override;
 
 };
 

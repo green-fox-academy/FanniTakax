@@ -18,5 +18,11 @@ int main() {
 
     Bird bird01("pigeon");
 
+    std::cout << bird01.breed() << std::endl;
+    std::cout << bird01.getName() << std::endl;
+    bird01.takeOff();
+    bird01.fly();
+    bird01.land();
+
     return 0;
 }
