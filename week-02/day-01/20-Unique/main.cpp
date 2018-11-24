@@ -1,6 +1,13 @@
 #include <iostream>
 #include <string>
 
+int unique(int array[8]){
+    for(int i = 0; i < sizeof(array)/sizeof(array[0]); i++){
+        if
+
+    }
+}
+
 int main(int argc, char* args[]) {
 
     //  Create a function that takes a list of numbers as a parameter

@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.12)
-project(12_purple_steps_3D)
+project(13_purple_steps_3D)
 
 set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-set(SDL2_PATH "C:/Users/malajabi/Documents/GitHub/Drawing/SDL2/SDL2-2.0.8/i686-w64-mingw32")
-set(SDL2_IMAGE_PATH "C:/Users/malajabi/Documents/GitHub/Drawing/SDL2/SDL2_image-2.0.3/i686-w64-mingw32")
-set(SDL2_TTF_PATH "C:/Users/malajabi/Documents/GitHub/Drawing/SDL2/SDL2_ttf-2.0.14/i686-w64-mingw32")
-set(SDL2_GFX "C:/Users/malajabi/Documents/GitHub/SDL2/Drawing/SDL2_plugins/gfx")
+set(SDL2_PATH "C:/Users/malajabi/Documents/GreenFox/FanniTakax/GitHub/Drawing/SDL2/SDL2-2.0.8/i686-w64-mingw32")
+set(SDL2_IMAGE_PATH "C:/Users/malajabi/Documents/GreenFox/FanniTakax/GitHub/Drawing/SDL2/SDL2_image-2.0.3/i686-w64-mingw32")
+set(SDL2_TTF_PATH "C:/Users/malajabi/Documents/GreenFox/FanniTakax/GitHub/Drawing/SDL2/SDL2_ttf-2.0.14/i686-w64-mingw32")
+set(SDL2_GFX "C:/Users/malajabi/Documents/GreenFox/FanniTakax/GitHub/Drawing/SDL2/SDL2_plugins/gfx")
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_image REQUIRED)
@@ -18,6 +18,6 @@ include_directories(${SDL2_GFX}/inc)
 file(GLOB gfx_inc "${SDL2_GFX}/inc/*.h")
 file(GLOB gfx_src "${SDL2_GFX}/src/*.c")
 
-add_executable(12_purple_steps_3D main.cpp ${gfx_inc} ${gfx_src})
+add_executable(13_purple_steps_3D main.cpp ${gfx_inc} ${gfx_src})
 
-target_link_libraries(12_purple_steps_3D ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES} ${SDL2_TTF_LIBRARIES})
+target_link_libraries(13_purple_steps_3D ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES} ${SDL2_TTF_LIBRARIES})

@@ -4,7 +4,9 @@
 
 Garden::Garden(const std::vector<Plants> &myGarden) : _myGarden(myGarden) {}
 
-void Garden::water(int amount) {
+void Garden::water(int amount)
+{
+    std::cout << "Watering with " << amount << std::endl;
     std::vector<Plants> plantsThatNeedWater;
 
     for(int i = 0; i < _myGarden.size(); i++){
@@ -16,7 +18,4 @@ void Garden::water(int amount) {
     for (int j = 0; j < plantsThatNeedWater.size(); ++j) {
         plantsThatNeedWater[j].absorbWater(amount/_myGarden.size());
     }
-
-
-
 }

@@ -30,8 +30,8 @@ void draw()
 
     int x1 = 0;
     int y1 = 0;
-    int y2 = SCREEN_WIDTH/2;
-    int x2 = SCREEN_HEIGHT/2;
+    int y2 = SCREEN_HEIGHT/2;
+    int x2 = SCREEN_WIDTH/2;
 
     for(int i = 0; i < 40; i++){
         x1 = rand() % 640 +1;
