@@ -1,7 +1,3 @@
-//
-// Created by malajabi on 11/13/2018.
-//
-
 #ifndef POKEMON_POKEMON_H
 #define POKEMON_POKEMON_H
 

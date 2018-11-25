@@ -4,9 +4,8 @@
 #include <vector>
 
 
-std::vector<std::string> filter(const std::vector<std::string>& list, const std::vector<std::string>& sweets){
+std::vector<std::string> filter(std::vector<std::string> list, const std::vector<std::string>& sweets){
     std::vector<std::string> list2 = list;
-    std::vector<std::string> sweets2 = sweets;
 
     for(int i = 0; i < list2.size(); ++i){
             if ( std::find(sweets.begin(), sweets.end(), list[i]) != sweets.end() ){

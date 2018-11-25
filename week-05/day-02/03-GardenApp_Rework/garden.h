@@ -9,7 +9,7 @@ class Garden {
 public:
     Garden(const std::vector<Plant> &myGarden);
 
-    void waterPlants();
+    //void waterPlants(double water);
 
 protected:
     std::vector<Plant> _myGarden;

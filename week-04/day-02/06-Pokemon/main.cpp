@@ -36,8 +36,5 @@ int main(int argc, char* args[])
             std::cout << "I choose You, " << pokemonOfAsh[i].getName() << std::endl;
         }
     }
-
-
-    //std::cout << "I choose You, " << name << std::endl;
     return 0;
 }

@@ -1,12 +1,8 @@
 #include <iostream>
 #include <string>
 
-int unique(int array[8]){
-    for(int i = 0; i < sizeof(array)/sizeof(array[0]); i++){
-        if
 
-    }
-}
+
 
 int main(int argc, char* args[]) {
 
@@ -16,7 +12,7 @@ int main(int argc, char* args[]) {
 
     //  Example
     int numbers[] = {1, 11, 34, 11, 52, 61, 1, 34};
-    std::cout << (unique(numbers)) << std::endl;
+    std::cout << (unique(numbers, 8)) << std::endl;
     //  should print: `[1, 11, 34, 52, 61]`
 
     return 0;

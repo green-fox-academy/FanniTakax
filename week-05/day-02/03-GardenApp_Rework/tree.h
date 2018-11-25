@@ -6,6 +6,11 @@
 class Tree : public Plant {
 public:
     Tree(int currentWaterAmount, const std::string &color);
+    void absorbWater(double getWaterAmount) override;
+    bool needWater() override;
+
+protected:
+
 
 };
 
