@@ -17,6 +17,5 @@ int main(int argc, char* args[]) {
 
     std::cout << attendee << std::endl;
 
-
     return 0;
 }
