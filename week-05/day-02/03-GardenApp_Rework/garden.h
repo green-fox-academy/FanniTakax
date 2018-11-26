@@ -4,12 +4,11 @@
 #include <vector>
 #include "plant.h"
 
-
-class Garden {
+class Garden : public Plant{
 public:
     Garden(const std::vector<Plant> &myGarden);
 
-    //void waterPlants(double water);
+    void waterPlants(double water);
 
 protected:
     std::vector<Plant> _myGarden;
