@@ -1,6 +1,6 @@
 #include "tree.h"
 
-Tree::Tree(int currentWaterAmount, const std::string &color) : Plant(currentWaterAmount, color) {
+Tree::Tree(double currentWaterAmount, const std::string &color) : Plant(currentWaterAmount, color) {
     _name = "Tree";
 }
 

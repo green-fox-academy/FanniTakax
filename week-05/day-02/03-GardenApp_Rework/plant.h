@@ -5,20 +5,19 @@
 
 class Plant {
 public:
-    Plant(int currentWaterAmount, const std::string &color);
+    Plant(double currentWaterAmount, const std::string &color);
 
     virtual void absorbWater(double getWaterAmount) = 0;
     virtual bool needWater() = 0;
 
-protected:
-    double _currentWaterAmount;
-    std::string _color;
-    std::string _name;
-public:
+    double getCurrentWaterAmount() const;
+    const std::string &getColor() const;
     const std::string &getName() const;
 
-public:
-    const std::string &getColor() const;
+protected:
+    std::string _color;
+    std::string _name;
+    double _currentWaterAmount;
 
 };
 

@@ -5,7 +5,7 @@
 
 class Flower : public Plant {
 public:
-    Flower(int currentWaterAmount, const std::string &color);
+    Flower(double currentWaterAmount, const std::string &color);
     void absorbWater(double getWaterAmount) override;
     bool needWater() override;
 

@@ -4,14 +4,14 @@
 #include <vector>
 #include "plant.h"
 
-class Garden : public Plant{
+class Garden {
 public:
-    Garden(const std::vector<Plant> &myGarden);
+    Garden(const std::vector<Plant*> &myGarden);
 
-    void waterPlants(double water);
+    void waterPlants(double water, std::vector<Plant*> garden);
 
 protected:
-    std::vector<Plant> _myGarden;
+    std::vector<Plant*> _myGarden;
 };
 
 
