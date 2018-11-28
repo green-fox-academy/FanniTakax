@@ -1,21 +1,17 @@
-#ifndef INC_02_GARDENAPP_GARDEN_H
-#define INC_02_GARDENAPP_GARDEN_H
+#ifndef INC_03_GARDENAPP_REWORK_GARDEN_H
+#define INC_03_GARDENAPP_REWORK_GARDEN_H
 
 #include <vector>
-#include "plants.h"
-
+#include "plant.h"
 
 class Garden {
 public:
-    Garden(const std::vector<Plants> &myGarden);
+    Garden(const std::vector<Plant*> &myGarden);
 
-    void water(int amount);
-
+    void waterPlants(double water, std::vector<Plant*> garden);
 protected:
-    std::vector<Plants> _myGarden;
-
-
+    std::vector<Plant*> _myGarden;
 };
 
 
-#endif //INC_02_GARDENAPP_GARDEN_H
+#endif //INC_03_GARDENAPP_REWORK_GARDEN_H

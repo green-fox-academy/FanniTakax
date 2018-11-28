@@ -1,17 +1,14 @@
-#ifndef INC_02_GARDENAPP_FLOWER_H
-#define INC_02_GARDENAPP_FLOWER_H
+#ifndef INC_03_GARDENAPP_REWORK_FLOWER_H
+#define INC_03_GARDENAPP_REWORK_FLOWER_H
 
-#include "plants.h"
+#include "plant.h"
 
-class Flower : public Plants {
+class Flower : public Plant {
 public:
-    Flower(const std::string &color, int currentWaterAmount);
-
-    void absorbWater(double amount) override;
+    Flower(double currentWaterAmount, const std::string &color);
+    void absorbWater(double getWaterAmount) override;
     bool needWater() override;
-
-
 };
 
 
-#endif //INC_02_GARDENAPP_FLOWER_H
+#endif //INC_03_GARDENAPP_REWORK_FLOWER_H

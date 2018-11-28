@@ -1,18 +1,13 @@
 #include "flower.h"
 
-
-Flower::Flower(const std::string &color, int currentWaterAmount) : Plants(color, currentWaterAmount) {
+Flower::Flower(double currentWaterAmount, const std::string &color) : Plant(currentWaterAmount, color) {
     _name = "Flower";
 }
 
-bool Flower::needWater() {
-    if(_currentWaterAmount < 10){
-        return true;
-    }else{
-        return false;
-    }
+void Flower::absorbWater(double getWaterAmount){
+    _currentWaterAmount += getWaterAmount*0.75;
 }
 
-void Flower::absorbWater(double amount) {
-    _currentWaterAmount += amount*0.4;
+bool Flower::needWater() {
+    return _currentWaterAmount < 5;
 }

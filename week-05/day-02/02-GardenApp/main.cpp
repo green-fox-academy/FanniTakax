@@ -1,29 +1,46 @@
 #include <iostream>
-#include <vector>
 #include "garden.h"
-#include "plants.h"
-#include "tree.h"
+#include "plant.h"
 #include "flower.h"
+#include "tree.h"
+#include <vector>
 
+void printMyGarden(std::vector<Plant *> myGarden);
 
 int main() {
+    std::vector<Plant *> myGarden;
+    Garden garden(myGarden);
 
-    std::vector<Plants> garden;
+    Flower flower01(2, "yellow");
+    Flower flower02(2, "blue");
+    Tree tree01(2, "purple");
+    Tree tree02(2, "orange");
+    myGarden.push_back(&flower01);
+    myGarden.push_back(&flower02);
+    myGarden.push_back(&tree01);
+    myGarden.push_back(&tree02);
 
-    Flower flower01("yellow", 11);
-    Flower flower02("blue", 11);
-    Tree tree01("purple", 60);
-    Tree tree02("orange", 60);
+    printMyGarden(myGarden);
 
-    garden.push_back(flower01);
-    garden.push_back(flower02);
-    garden.push_back(tree01);
-    garden.push_back(tree02);
+   garden.waterPlants(40, myGarden);
 
-    Garden garden01(garden);
+    printMyGarden(myGarden);
 
-    garden01.water(40);
+    garden.waterPlants(70, myGarden);
+
+    printMyGarden(myGarden);
 
 
     return 0;
 }
+
+void printMyGarden(std::vector<Plant *> myGarden){
+
+    for (int i = 0; i < myGarden.size(); ++i) {
+        if(! myGarden[i]->needWater()){
+            std::cout << "The " << myGarden[i]->getColor() << " "<< myGarden[i]->getName() << " doesnt  need water." << std::endl;
+        }else{
+            std::cout << "The " << myGarden[i]->getColor() << " "<< myGarden[i]->getName() << " needs water." << std::endl;
+        }
+    }
+};

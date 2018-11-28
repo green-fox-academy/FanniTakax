@@ -1,17 +1,14 @@
-#ifndef INC_02_GARDENAPP_TREE_H
-#define INC_02_GARDENAPP_TREE_H
+#ifndef INC_03_GARDENAPP_REWORK_TREE_H
+#define INC_03_GARDENAPP_REWORK_TREE_H
 
-#include "plants.h"
+#include "plant.h"
 
-
-class Tree : public Plants {
+class Tree : public Plant {
 public:
-    Tree(const std::string &color, int currentWaterAmount);
-
-    void absorbWater(double amount) override;
+    Tree(double currentWaterAmount, const std::string &color);
+    void absorbWater(double getWaterAmount) override;
     bool needWater() override;
-
 };
 
 
-#endif //INC_02_GARDENAPP_TREE_H
+#endif //INC_03_GARDENAPP_REWORK_TREE_H

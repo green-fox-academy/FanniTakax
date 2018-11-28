@@ -9,8 +9,6 @@ public:
 
     virtual void absorbWater(double getWaterAmount) = 0;
     virtual bool needWater() = 0;
-
-    double getCurrentWaterAmount() const;
     const std::string &getColor() const;
     const std::string &getName() const;
 
@@ -18,7 +16,6 @@ protected:
     std::string _color;
     std::string _name;
     double _currentWaterAmount;
-
 };
 
 

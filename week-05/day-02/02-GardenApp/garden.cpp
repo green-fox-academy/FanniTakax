@@ -1,21 +1,17 @@
 #include "garden.h"
-#include "tree.h"
-#include "flower.h"
+#include <vector>
 
-Garden::Garden(const std::vector<Plants> &myGarden) : _myGarden(myGarden) {}
+Garden::Garden(const std::vector<Plant*> &myGarden) : _myGarden(myGarden) {}
 
-void Garden::water(int amount)
-{
-    std::cout << "Watering with " << amount << std::endl;
-    std::vector<Plants> plantsThatNeedWater;
+void Garden::waterPlants(double water, std::vector<Plant*> garden) {
+    std::cout << "Watering with " << water << std::endl;
 
-    for(int i = 0; i < _myGarden.size(); i++){
-        if(_myGarden[i].needWater()){
-            plantsThatNeedWater.push_back(_myGarden[i]);
+    for (int i = 0; i < garden.size(); ++i) {
+        if(garden[i]->needWater()){
+            garden[i]->absorbWater(water/garden.size());
         }
     }
-
-    for (int j = 0; j < plantsThatNeedWater.size(); ++j) {
-        plantsThatNeedWater[j].absorbWater(amount/_myGarden.size());
-    }
 }
+
+
+

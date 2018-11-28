@@ -11,7 +11,3 @@ const std::string &Plant::getName() const {
     return _name;
 }
 
-double Plant::getCurrentWaterAmount() const {
-    return _currentWaterAmount;
-}
-
