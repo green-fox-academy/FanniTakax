@@ -24,7 +24,7 @@ int main(int argc, char* args[])
 
     std::vector<Domino> dominoes = initializeDominoes();
     std::vector<Domino> dominoes_2;
-    
+
     dominoes_2.push_back(dominoes[rand() % dominoes.size()-1]);
 
     for (int i = 0; i < dominoes.size()-1; ++i) {
