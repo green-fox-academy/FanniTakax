@@ -23,13 +23,8 @@ int main(int argc, char* args[])
     srand(time(nullptr));
 
     std::vector<Domino> dominoes = initializeDominoes();
-
-    // You have the list of Dominoes
-    // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
-    // eg: [2, 4], [4, 3], [3, 5] ...
-
     std::vector<Domino> dominoes_2;
-
+    
     dominoes_2.push_back(dominoes[rand() % dominoes.size()-1]);
 
     for (int i = 0; i < dominoes.size()-1; ++i) {
