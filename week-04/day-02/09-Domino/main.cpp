@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <time.h>
+#include <stdlib.h>
+#include <cstdlib>
 
 #include "domino.h"
 
@@ -17,6 +20,8 @@ std::vector<Domino> initializeDominoes()
 
 int main(int argc, char* args[])
 {
+    srand(time(nullptr));
+
     std::vector<Domino> dominoes = initializeDominoes();
 
     // You have the list of Dominoes
@@ -25,11 +30,9 @@ int main(int argc, char* args[])
 
     std::vector<Domino> dominoes_2;
 
-    //(dominoes[j].getValues().second == dominoes[i].getValues().first)
+    dominoes_2.push_back(dominoes[rand() % dominoes.size()-1]);
 
-    dominoes_2.push_back(dominoes[1]);
-
-    for (int i = 0; i < dominoes_2.size(); ++i) {
+    for (int i = 0; i < dominoes.size()-1; ++i) {
         for (int j = 0; j < dominoes.size(); ++j) {
             if(dominoes_2[i].getValues().second == dominoes[j].getValues().first){
                 dominoes_2.push_back(dominoes[j]);
