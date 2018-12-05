@@ -22,7 +22,7 @@ int main()
 void canBuyAlc(int x){
     if(x < 18){
         printf("You are not old enough to buy alcohol. Be patient or ask somebody..");
-    }else if(x >= 18){
+    }else{
         printf("You are old enough to buy alcohol. Let's get drunk!");
     }
 }
