@@ -21,7 +21,7 @@ int main()
 
     printf(" your name is %d long", stringLength(name));
 
-    
+
 
     return 0;
 }
