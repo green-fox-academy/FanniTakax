@@ -9,5 +9,5 @@ double circleArea (double radius)
 double circleCircumference(double radius)
 {
     double circumference = 2 * radius * PI;
-    return circunference;
+    return circumference;
 }
