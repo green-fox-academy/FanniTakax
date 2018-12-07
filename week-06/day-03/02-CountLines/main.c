@@ -15,6 +15,7 @@ int file_lines(char * file_name)
         fgets(line, 111, fptr);
         counter++;
     }
+    fclose(fptr);
     return counter;
 }
 
