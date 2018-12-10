@@ -1,0 +1,1 @@
+add_library(tdd_lib tdd.h tdd.cpp tdd.cpp tdd.h)
