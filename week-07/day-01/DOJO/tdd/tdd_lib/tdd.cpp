@@ -23,9 +23,27 @@ bool isWinnerPlayer1(std::vector<tdd> player1, std::vector<tdd> player2)
         }
     }
 
-    if(maxCardPlayer1 > maxCardPlayer2){
-        return true;
-    }else{
-        return false;
-    }
+    return maxCardPlayer1 > maxCardPlayer2;
 }
+
+bool isWinnerPlayer1_PAIR(std::vector<tdd> player1, std::vector<tdd> player2)
+{
+    int counter1 = 0;
+    for (int i = 0; i < player1.size(); ++i) {
+        for (int j = 0; j < player1.size(); ++j) {
+            if(player1[i].getValue() == player1[j].getValue())
+                counter1++;
+        }
+    }
+
+    int counter2 = 0;
+    for (int i = 0; i < player2.size(); ++i) {
+        for (int j = 0; j < player2.size(); ++j) {
+            if(player2[i].getValue() == player2[j].getValue())
+                counter2++;
+        }
+    }
+
+    return counter1/2 > counter2/2;
+}
+

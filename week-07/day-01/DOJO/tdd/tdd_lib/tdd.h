@@ -2,6 +2,7 @@
 #define TDD_TDD_H
 
 #include <vector>
+#include <iostream>
 
 enum class color {
     C,
@@ -39,5 +40,6 @@ protected:
 };
 
 bool isWinnerPlayer1(std::vector<tdd> player1, std::vector<tdd> player2);
+bool isWinnerPlayer1_PAIR(std::vector<tdd> player1, std::vector<tdd> player2);
 
 #endif //TDD_TDD_H
