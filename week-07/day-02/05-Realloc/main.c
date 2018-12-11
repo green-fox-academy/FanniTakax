@@ -29,12 +29,13 @@ int main()
     }
     printf("Their sum is: %d\n", sum);
 
-    pointer = realloc(pointer, (x + 1) * sizeof(int));
-    pointer[x] = sum;
+    pointer = realloc(pointer, sum * sizeof(int));
 
-    for (int j = 0; j < (x + 1); ++j) {
-        printf(">> %d\n", pointer[j]);
+    for (int j = 0; j < sum; ++j) {
+        pointer[j] = j + 1;
+        printf("oOo %d\n", pointer[j]);
     }
+    
 
     return 0;
 }
