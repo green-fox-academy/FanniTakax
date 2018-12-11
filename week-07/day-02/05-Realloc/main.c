@@ -35,7 +35,7 @@ int main()
         pointer[j] = j + 1;
         printf("oOo %d\n", pointer[j]);
     }
-    
+
 
     return 0;
 }
