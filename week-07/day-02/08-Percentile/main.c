@@ -33,7 +33,7 @@ int main()
         pointer[i] = rand() % 100;
     }
 
-    printf("%dth percentile: %d\n", 50, percentile(pointer, 50, matrix_size));
+    printf("%dth percentile: %d\n", 90, percentile(pointer, 90, matrix_size));
     printf("%dth percentile: %d\n", 80, percentile(pointer, 80, matrix_size));
 
 
