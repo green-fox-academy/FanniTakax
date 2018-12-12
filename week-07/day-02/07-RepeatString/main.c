@@ -15,9 +15,14 @@ int main()
     char* name = "Fanni";
     char* smthng = ".. ";
 
-    printf("%s\n", repeat(name, 6));
-    printf("%s\n", repeat(smthng, 23));
+    char* name_repeated = repeat(name, 6);
+    char* smthng_repeated = repeat(smthng, 23);
 
+    printf("%s\n", name_repeated);
+    printf("%s\n", smthng_repeated);
+
+    free(name_repeated);
+    free(smthng_repeated);
 
     return 0;
 }

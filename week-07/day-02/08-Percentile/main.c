@@ -36,6 +36,7 @@ int main()
     printf("%dth percentile: %d\n", 90, percentile(pointer, 90, matrix_size));
     printf("%dth percentile: %d\n", 80, percentile(pointer, 80, matrix_size));
 
+    free(pointer);
 
     return 0;
 }
