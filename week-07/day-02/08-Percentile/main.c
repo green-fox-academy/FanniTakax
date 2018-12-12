@@ -33,20 +33,8 @@ int main()
         pointer[i] = rand() % 100;
     }
 
-// checking matrix
-   for (int  i = 0;  i < matrix_size; ++ i) {
-        printf(">>%d<< %d\n", i + 1, pointer[i]);
-    }
-    printf("_____________________________________________________________\n");
-
-// checking arranged matrix
-    arrange(pointer, matrix_size);
-    for (int  i = 0;  i < matrix_size; ++ i) {
-        printf(">>%d<< %d\n", i + 1, pointer[i]);
-    }
-
-    printf("%d\n", percentile(pointer, 50, matrix_size));
-    printf("%d\n", percentile(pointer, 80, matrix_size));
+    printf("%dth percentile: %d\n", 50, percentile(pointer, 50, matrix_size));
+    printf("%dth percentile: %d\n", 80, percentile(pointer, 80, matrix_size));
 
 
     return 0;
