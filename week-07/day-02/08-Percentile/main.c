@@ -8,10 +8,10 @@
 //Create a function which can calculate the n-th percentile of the elements.
 //Calculate the 80-th and the 90-th percentile.
 
-int percentile(int* matrix, int percentile, int matrix_size);
-void swap(int* a, int* b);
-void arrange(int* array, int matrix_size);
 
+void swap(int* a, int* b);
+int* arrange(int* array, int matrix_size);
+int percentile(int* matrix, int percentile, int matrix_size);
 
 int main()
 {
@@ -33,28 +33,25 @@ int main()
         pointer[i] = rand() % 100;
     }
 
-// matrix checking
+// checking matrix
    for (int  i = 0;  i < matrix_size; ++ i) {
         printf(">>%d<< %d\n", i + 1, pointer[i]);
     }
     printf("_____________________________________________________________\n");
 
+// checking arranged matrix
     arrange(pointer, matrix_size);
-
     for (int  i = 0;  i < matrix_size; ++ i) {
         printf(">>%d<< %d\n", i + 1, pointer[i]);
     }
+
+    printf("%d\n", percentile(pointer, 50, matrix_size));
+    printf("%d\n", percentile(pointer, 80, matrix_size));
 
 
     return 0;
 }
 
-int percentile(int* matrix, int percentile, int matrix_size)
-{
-    int percentile_index = (int)((percentile / 100.0) * matrix_size - 1);
-    printf("percentile index %d\n", percentile_index);
-    return matrix[percentile_index];
-}
 
 void swap(int* a, int* b)
 {
@@ -64,13 +61,22 @@ void swap(int* a, int* b)
 }
 
 
-void arrange(int* array, int matrix_size)
+int* arrange(int* array, int matrix_size)
 {
-    for (int i = 0; i < matrix_size - 1; ++i) {
-        for (int j = i; j < matrix_size - 1 - i; ++j) {
+    for (int i = 0; i < matrix_size-1; ++i) {
+        for (int j = 0; j < matrix_size-1; ++j) {
             if(array[j] > array[j+1]){
-                swap(&array[i], &array[j]);
+                swap(&array[j], &array[j+1]);
             }
         }
     }
+    return array;
+}
+
+int percentile(int* matrix, int percentile, int matrix_size)
+{
+    int* matrix_arranged = arrange(matrix, matrix_size);
+    int percentile_index = (int)((percentile / 100.0) * matrix_size);
+
+    return matrix_arranged[percentile_index];
 }
