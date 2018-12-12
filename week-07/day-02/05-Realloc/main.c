@@ -36,6 +36,8 @@ int main()
         printf("oOo %d\n", pointer[j]);
     }
 
+    free(pointer);
+
 
     return 0;
 }
