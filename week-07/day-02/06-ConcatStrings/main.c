@@ -15,7 +15,17 @@ int main()
 
     char text3[100] = " euhfoehro3hrgo iorhgo rjryjyjttj tyjyjtyjtj ryj3rhgo3";
 
-    printf( "%s\n", concat(text2, text3));
+    char* text_conc_2_3 = concat(text2, text3);
+    char* text_conc_1_3 = concat(text1, text3);
+    char* text_conc_1_2 = concat(text1, text2);
+
+    printf( "%s\n", text_conc_2_3);
+    printf( "%s\n", text_conc_1_3);
+    printf( "%s\n", text_conc_1_2);
+
+    free(text_conc_1_2);
+    free(text_conc_1_3);
+    free(text_conc_2_3);
 
     return 0;
 }
