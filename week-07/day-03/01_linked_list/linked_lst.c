@@ -16,14 +16,20 @@ node_t* push_front_list(node_t* head, int value)
     return new_node;
 }
 
-node_t* push_back_list(node_t* head, int value)
+node_t* push_back_list(node_t** head, int value)
 {
-    node_t* new_node = init_linked_list();
+    node_t *new_node = init_linked_list();
     new_node->value = value;
-    node_t* p = head;
-    while(p != NULL){
+    node_t *p = *head;
+    if (p == NULL) {
+        *head = new_node;
+        new_node->next = NULL;
+        return p;
+    }
+
+    while (p->next != NULL) {
         p = p->next;
-        }
+    }
     p->next = new_node;
     new_node->next = NULL;
     return new_node;
