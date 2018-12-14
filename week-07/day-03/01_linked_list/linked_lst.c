@@ -51,8 +51,6 @@ node_t* insert_after_node(node_t* head, int value, node_t* node)
     return new_node;
 }
 
-
-//NEMMUKODIK
 node_t* insert_after_value(node_t* head, int value, int value_after)
 {
     node_t *new_node = init_node();
@@ -64,18 +62,46 @@ node_t* insert_after_value(node_t* head, int value, int value_after)
         if(p->value == value_after){
             new_node->next = p->next;
             p->next = new_node;
-            return new_node;
-        }else{
+            break;
+        }else if(p->next == NULL){
             p->next = new_node;
             new_node->next = NULL;
-            return new_node;
+            break;
         }
+    }
+    return new_node;
+}
+
+int size(node_t* head)
+{
+    node_t* p = head;
+    int counter = 0;
+    while(p != NULL){
+        p = p->next;
+        counter ++;
+    }
+    return counter;
+}
+
+int is_empty(node_t* head)
+{
+    if(head == NULL){
+        return 1;
+    }else{
+        return 0;
     }
 }
 
+node_t* delete_first(node_t** head)
+{
+    if(*head != NULL){
+        node_t* p = *head;
+        *head = (*head)->next;
+        free(p);
+    }
 
-
-
+    return *head;
+}
 
 
 
