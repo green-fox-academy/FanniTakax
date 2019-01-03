@@ -9,7 +9,7 @@ int main()
     int size = sizeof(array) / sizeof(array[0]);
 
     for(int i = 0; i < size; i++){
-        printf("%c", (char) array[i]);
+        printf("%c", array[i]);
     }
 
     return 0;
