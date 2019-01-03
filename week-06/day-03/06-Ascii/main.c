@@ -1,6 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // print out the characters that corresponds to these ascii values
+
+//int compare (const void * a, const void * b)
+//{
+//    return ( *(int*)a - *(int*)b );
+//}
 
 int main()
 {
@@ -11,6 +17,10 @@ int main()
     for(int i = 0; i < size; i++){
         printf("%c", array[i]);
     }
+
+    //qsort (array, 9, sizeof(int), compare);
+    //for (int n = 0; n < 9; n++)
+    //    printf ("%d ",array[n]);
 
     return 0;
 }

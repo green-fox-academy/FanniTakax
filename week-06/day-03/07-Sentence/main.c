@@ -5,7 +5,7 @@
 // and splits a string to words by space
 // solve the problem with the proper string.h function
 
-void split_string(char text[500])
+void split_string(char text[])
 {
 
     char* word = strtok(text, " ");
@@ -20,8 +20,8 @@ void split_string(char text[500])
 int main()
 {
     char string[256];
-    printf("Type in a sentence:\n\n");
-    scanf("%s", string);
+    puts("Type in a sentence:\n");
+    gets(string);
 
     split_string(string);
 
