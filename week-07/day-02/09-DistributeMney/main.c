@@ -42,5 +42,7 @@ int main()
 
     printf("\n%d remains of the heritage.", heritage);
 
+    free(relatives_partying);
+
     return 0;
 }
