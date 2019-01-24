@@ -9,7 +9,7 @@ using namespace cv;
 int main() {
     Mat image;
 
-    image = imread( "fire.jpeg", IMREAD_COLOR );
+    image = imread( "../fire.jpeg", IMREAD_COLOR );
 
     if( image.empty() )
     {
